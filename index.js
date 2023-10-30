@@ -73,19 +73,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = carousel.getElementsByTagName("img");
     let currentIndex = 0;
   
-    // Función para avanzar al siguiente elemento
     function nextSlide() {
       currentIndex = (currentIndex + 1) % images.length;
       updateCarousel();
     }
   
-    // Función para retroceder al elemento anterior
+
     function prevSlide() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       updateCarousel();
     }
   
-    // Función para actualizar el carrusel con la imagen actual
+
     function updateCarousel() {
       for (let i = 0; i < images.length; i++) {
         if (i === currentIndex) {
@@ -96,11 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   
-    // Agregar eventos a los botones
+ 
     prevButton.addEventListener("click", prevSlide);
     nextButton.addEventListener("click", nextSlide);
   
-    // Mostrar la primera imagen
+
     updateCarousel();
   });
   
