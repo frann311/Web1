@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Josefin+Sans:wght@200&family=Playball&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <sectiom class="container">
+            <div class="logo ">
+               <a href="index.html">Jorgelina Avgustin</a>
+            </div>
+            <nav class="menu ">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT ME</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </sectiom> 
+    </header>
+    
+    <section class="contact-container">
+        <div class="container">
+            <div class="contact-container">
+        <article class="contact">
+            
+            <form class="contact-form" onsubmit="return corroborar()" id="frm">
+                <label for="idname">Name</label>
+                <input type="text" name="idname" id="idname" placeholder="Ingresa tu nombre">
+                <span id="nameError" class="error-message"></span> <!-- Nuevo elemento para el mensaje de error -->
+            
+                <label for="idsession">Session</label>
+                <select name="idsession" id="idsession">
+                    <option disabled selected value="">...</option>
+                    <option value="Intensives">Intensives</option>
+                    <option value="Free-themed Talk">Free-themed Talk</option>
+                    <option value="In-company">In-company</option>
+                </select>
+                <span id="sessionError" class="error-message"></span> <!-- Nuevo elemento para el mensaje de error -->
+            
+                <label for="idemail">Email</label>
+                <input type="email" name="idemail" id="idemail" placeholder="Ingresa tu email">
+                <span id="emailError" class="error-message"></span> <!-- Nuevo elemento para el mensaje de error -->
+
+                <input class="btn" type="submit" id="btnSaludar" value="Send message">
+            </form>
+            <div id="enviados" style="display: none;">
+                <h2>Datos enviados:</h2>
+                <div id="datosEnviadosContainer"></div>
+            </div>
+        </article>
+   
+        <article class="contact-info text-center">
+            <p>How about a free first class? Go ahead
+                Make an appointment and let's get to know each other, 
+                talk about your level, your goals and why you want to learn Spanish.</p>
+                <img src="assets/redonditos (sin fondo).png" alt="">
+        </article>
+    </div>
+    </div>
+    
+    </section>
+
+
+   <script src="index.js"></script>
+</body>
+</html>
