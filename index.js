@@ -10,6 +10,9 @@ function corroborar() {
 
   let isValid = true;
 
+
+
+
   if (name.trim() === "" || name.trim().length > 25) {
       nameError.textContent = "Nombre requerido (máximo 25 caracteres)";
       document.getElementById("idname").classList.add("error");
@@ -18,6 +21,8 @@ function corroborar() {
       nameError.textContent = "";
       document.getElementById("idname").classList.remove("error");
   }
+
+
 
   if (session === "") {
       sessionError.textContent = "Session requerida";
@@ -28,6 +33,10 @@ function corroborar() {
       document.getElementById("idsession").classList.remove("error");
   }
 
+
+
+
+  
   let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   if (email.trim() === "" || !emailPattern.test(email)) {
       emailError.textContent = "Email requerido (formato válido)";
@@ -37,6 +46,8 @@ function corroborar() {
       emailError.textContent = "";
       document.getElementById("idemail").classList.remove("error");
   }
+
+
 
   if (isValid) {
       let datosEnviadosContainer = document.getElementById("datosEnviadosContainer");
@@ -61,6 +72,9 @@ function corroborar() {
   return false;
 }
 /* ********** carrusel *********** */
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.getElementById("carousel");
   if (!carousel) {
@@ -77,10 +91,14 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
   }
 
+
+
   function prevSlide() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateCarousel();
   }
+
+
 
   function updateCarousel() {
     for (let i = 0; i < images.length; i++) {
@@ -95,6 +113,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (prevButton) {
     prevButton.addEventListener("click", prevSlide);
   }
+
+
+
 
   if (nextButton) {
     nextButton.addEventListener("click", nextSlide);
