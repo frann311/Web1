@@ -69,7 +69,7 @@ function corroborar() {
       document.getElementById("enviados").style.display = "block";
   }
 
-  return false;
+   return  false;
 }
 /* ********** carrusel *********** */
 
@@ -77,7 +77,7 @@ function corroborar() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.getElementById("carousel");
-  if (!carousel) {
+  if (!carousel){
     return; 
   }
 
@@ -101,11 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function updateCarousel() {
-    for (let i = 0; i < images.length; i++) {
+    for (let i = 0; i < images.length; i++) { 
       if (i === currentIndex) {
-        images[i].style.display = "block";
-      } else {
-        images[i].style.display = "none";
+        images[i].style.display = "block"; 
+      } else { 
+        images[i].style.display = "none"; 
       }
     }
   }
